@@ -1,0 +1,24 @@
+include ../../node_modules/bemto.jade/bemto
+
+include ../components/login/login
+include ../components/top-menu/top-menu
+include ../components/header/header
+include ../components/logo/logo
+include ../components/tabs/tabs
+include ../components/search/search
+include ../components/slider/slider
+include ../components/footer/footer
+
+doctype html
+html(lang='ru')
+    include ../components/head/head
+
+    body
+        +top-menu()
+        +header()
+
+        block content
+
+        +footer()
+
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

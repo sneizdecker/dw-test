@@ -1,0 +1,5 @@
+mixin search(data)
+    +b.search()&attributes(attributes)
+        +e('form').form
+            +e('input').field(placeholder='поиск по сайту')
+            != jadeHelpers.Icon.call(locals, {iconName: 'search', className: 'search__icon'})

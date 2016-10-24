@@ -1,0 +1,28 @@
+mixin top-menu(data)
+
+    +login()
+
+    +b.top-menu()&attributes(attributes)
+        +e('button')#hamburger.hamburger(href=jv0)
+            +e('span')#hamburger-icon.hamburger-icon
+        +e#mob-menu.center
+            +e.language
+                +e.item
+                    +e('a').link(href=jv0)
+                        | USA site
+                +e.item
+                    +e('a').link(href=jv0)
+                        | Deutsch site
+                +e.item
+                    +e('span').text
+                        | Россия: 
+                    +e('a').link(href=jv0)
+                        | Switch to english
+            +e.login
+                +e.item
+                    != jadeHelpers.Icon.call(locals, {iconName: 'board', className: 'top-menu__board-icon'})
+                    +e('a').link(href=jv0)
+                        | Онлайн-табло
+                +e.item
+                    +e('a')#login-link.link(href='#login')
+                        | Вход и регистрация

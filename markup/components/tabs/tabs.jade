@@ -1,0 +1,18 @@
+mixin tabs(data)
+	+b.tabs()&attributes(attributes)
+		+e('ul').nav
+			+e('li').nav-item
+				+e('a').nav-link._active(href=jv0)
+					| Возможности
+			+e('li').nav-item
+				+e('a').nav-link(href=jv0)
+					| Информация
+			+e('li').nav-item
+				+e('a').nav-link(href=jv0)
+					| Привелегии
+		+e.content._active
+			+slider()
+		+e.content
+			| Содержимое второго таба
+		+e.content
+			| Содержимое третьего таба

@@ -1,0 +1,50 @@
+.header {
+	@include clearfix;
+
+	&__center {
+		margin-bottom: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 15px;
+		max-width: 960px;
+		@include clearfix;
+
+		@include above(567px) {
+			margin-bottom: 100px;
+			padding-top: 20px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		@include above(940px) {
+			margin-bottom: 20px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&__logo {
+		z-index: 1;
+		position: relative;
+		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include above(567px) {
+			float: left;
+			margin-bottom: 0;
+		}
+	}
+
+	&__search {
+		z-index: 1;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include above(567px) {
+			float: right;
+			margin-top: 5px;
+		}
+	}
+}

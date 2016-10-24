@@ -1,0 +1,10 @@
+mixin login(data)
+    +b#login.login()&attributes(attributes)
+        +e('form')#login__form.form(method='get' action='')
+            +e.error-text
+                | * Проверьте корректность e-mail
+            +e('input')#login__email.field(type='text' placeholder='e-mail')
+            +e.error-text
+                | * Проверьте корректность пароля
+            +e('input')#login__password.field(type='password' placeholder='пароль')
+            +e('input')#login__submit.submit(type='submit' value='Войти')

@@ -1,0 +1,153 @@
+.top-menu {
+	position: relative;
+	background-color: #ededed;
+	color: #000;
+	width: 100%;
+	height: 41px;
+
+	&__board-icon {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+
+	&__hamburger {
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 41px;
+		height: 41px;
+		background-color: #bbbaba;
+		border: none;
+		outline: none;
+
+		@include above(567px) {
+			display: none;
+		}
+	}
+
+	&__hamburger-icon,
+	&__hamburger-icon:before,
+	&__hamburger-icon:after {
+		position: absolute;
+		width: 25px;
+		height: 3px;
+		background-color: #fff;
+	}
+
+	&__hamburger-icon {
+		position: absolute;
+		top: 19px;
+		left: 8px;
+
+		&:before {
+			top: -9px;
+			left: 0;
+			content: '';
+		}
+
+		&:after {
+			top: 9px;
+			left: 0;
+			content: '';
+		}
+
+		&_active {
+			background-color: transparent;
+
+			&:before {
+				top: 0;
+				transform: rotate(-45deg);
+			}
+
+			&:after {
+				top: 0;
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	&__center {
+		z-index: 2;
+		position: absolute;
+		display: none;
+		width: 100%;
+		max-width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #fff;
+		box-shadow: 0px 1px 10px #000;
+		@include clearfix;
+
+		@include above(567px) {
+			position: relative;
+			padding-left: 10px;
+			padding-right: 10px;
+			display: block;
+			box-shadow: none;
+			background-color: transparent;
+		}
+
+		@include above(940px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&_visible {
+			display: block;
+		}
+	}
+
+	&__language {
+		display: block;
+
+		@include above(567px) {
+			float: left;
+		}
+	}
+
+	&__login {
+		display: block;
+
+		@include above(567px) {
+			float: right;
+		}
+	}
+
+	&__item {
+		margin-left: 20px;
+		display: block;
+		height: 60px;
+		line-height: 60px;
+		font-family: $PTSansBold;
+		font-size: 16px;
+
+		@include above(567px) {
+			margin-left: 5px;
+			margin-right: 5px;
+			display: inline-block;
+			height: 41px;
+			line-height: 41px;
+			font-size: 12px;
+		}
+
+		@include above(940px) {
+			margin-right: 28px;
+			margin-left: 0;
+		}
+
+		&:last-child {
+			@include above(940px) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__link {
+		color: #0c4da2;
+		text-decoration: none;
+	}
+}
